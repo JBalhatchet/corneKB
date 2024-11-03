@@ -18,6 +18,15 @@
         };
     };
 
+    macros {
+        alttab: alttab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&alttab>;
+            label = "ALTTAB";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -45,7 +54,7 @@
 
             bindings = <
 &kp TAB    &kp N1  &kp N2  &kp N3     &kp N4  &kp N5       &kp N6    &kp N7    &kp N8     &kp N9  &kp N0  &kp BSPC
-&trans     &trans  &trans  &trans     &trans  &trans       &trans    &kp UP    &trans     &trans  &trans  &trans
+&alttab    &trans  &trans  &trans     &trans  &trans       &trans    &kp UP    &trans     &trans  &trans  &trans
 &kp LCTRL  &trans  &trans  &trans     &trans  &trans       &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans  &trans
                            &kp LSHFT  &trans  &kp SPACE    &kp RET   &trans    &kp RALT
             >;
